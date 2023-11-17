@@ -29,27 +29,30 @@ export default function Home() {
     }
 
     try {
-      const response = await fetch('https://www.demo.pms.crossdevlogix.com/api/login', {
+      
+        const response = await fetch('https://www.demo.lms.crossdevlogix.com/api/user/login', {
         method: 'POST',
         body: JSON.stringify(formvalue),
         headers: {
           'Content-Type': 'application/json',
         },
       });
-      if (response.ok) {
-        const data = await response.json();
-        if (data.token) {
-          localStorage.setItem('token', data.token);
-          console.log(data);
-          router.push('/welcome');
-          
-         
+      
+      // const r = await response.json();
+      // console.log(r)
+
+      if(response.ok){
+        const {user}=await response.json()
+
+
+        if(user?.user_type === "super_admin"){
+          console.log("Go to super admin")
+        }else if(user?.user_type === "admin"){
+          console.log("Go to admin site")
         }
-        setApiResponse(data);
-      } else {
-        const errorData = await response.json();
-        setApiResponse(errorData);
+        router.push('/welcome');
       }
+     
     } catch (error) {
       console.error('An error occurred:', error);
     }
@@ -70,7 +73,7 @@ export default function Home() {
             />
           </div>
           <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-black">
-            Login to School Devlogix
+            Login to School of  Devlogix
           </h2>
         </div>
         <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">

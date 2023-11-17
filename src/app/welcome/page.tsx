@@ -1,4 +1,3 @@
-
 'use client'
 
 import Head from "next/head";
@@ -11,7 +10,7 @@ import Courses from "../welcome/Courses/page";
 import Departments from "../welcome/Departments/page";
 import Register from "../welcome/Register/page";
 import Student from "../welcome/Student/page";
-import SuperAdmin from "../welcome/SuperAdmin/page";
+
 
 import { BsArrowLeftShort } from "react-icons/bs";
 import { FaPersonShelter } from "react-icons/fa6";
@@ -22,6 +21,8 @@ import { FcFactory, FcLandscape } from "react-icons/fc";
 import { RiDashboardFill } from "react-icons/ri";
 import Dashboard from "../welcome/Dashboard/page";
 import Logout from "../welcome/Logout/page";
+// import Createbusiness from "./Createbusiness/page";
+import Business from "../welcome/Business/CreateBusiness";
 
 // ===================
 
@@ -35,7 +36,7 @@ const Page = () => {
     const Menus = [
       { title: "Dashboard" },
       
-        { title: "Super-Admin", icon: <FaPersonShelter /> },
+        { title: "Business", icon: <FaPersonShelter /> },
 
         { title: "Admin", icon: <FaPersonShelter /> },
         { title: "Courses", icon: <MdOutlineRealEstateAgent /> },
@@ -106,10 +107,8 @@ const Page = () => {
                                    cursor-pointer 
                                                 ${!open && "rotate-180"} `}
                                                onClick={() => setOpen(!open)} />
-
-
-                    {/* sidebar logo */}
-                    <div className="inline-flex">
+  {/* sidebar logo */}
+  <div className="inline-flex">
                         <img
                             src="/Devlogix.png"
                             alt="Profile Logo"
@@ -135,8 +134,8 @@ const Page = () => {
                  ${selectedMenuItem === menu.title ? "bg-black text-white" : ""
                                         }`}
                                 >
-                                    {/* for icons of sidebar */}
-                                    <span className="text-2xl block  float-left">
+                                  {/* for icons of sidebar */}
+                                  <span className="text-2xl block  float-left">
                                         {menu.icon ? menu.icon : <RiDashboardFill />}
                                     </span>
 
@@ -164,13 +163,12 @@ const Page = () => {
         {currentPage === "Register" && <Register />}
         {currentPage === "Student" && <Student />}
         {currentPage === "Departments" && <Departments />}
-        {currentPage === "Super-Admin" && <SuperAdmin/>}
+        {currentPage === "Business" && <Business/>}
 
 
         {currentPage === "Logout" && <Logout />}
 
-
-                </div>
+                        </div>
             </div>
 
         </>
@@ -182,5 +180,4 @@ const Page = () => {
 
 };
 
-export default Page;
-
+export default Page;   
