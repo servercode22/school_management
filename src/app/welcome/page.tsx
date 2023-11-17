@@ -60,7 +60,7 @@ const Page = () => {
         <Head>
           {/* Add your head content here */}
         </Head>
-        <div className="flex p-4 justify-end items-center pr-4">
+        <div className="flex p-2 justify-end items-center pr-4">
          
           {/* Profile Logo */}
           <div
@@ -93,7 +93,7 @@ const Page = () => {
                     className={`bg-blue-950
        text-white
         h-screen
-         p-8 pt-8 mt-6 pr-5
+         p-4 pt-8 mt-6 pr-5
           ${open ? "w-72" : "w-20"} 
           duration-300 relative`}>
 
@@ -101,7 +101,7 @@ const Page = () => {
                         className={`bg-blue-950
                           text-blue
                            text-3xl  
-                           rounded-full mt-4
+                           rounded-full mt-2
                            absolute -right-3 top-9  
                            border border-blue 
                                    cursor-pointer 

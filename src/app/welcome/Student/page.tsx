@@ -16,7 +16,7 @@ const  page: React.FC = () => {
         <title>School Dashboard</title>
       </Head>
 
-      <div className="container mx-auto">
+      <div className="container mx-auto mt-14">
         <h1 className="text-2xl font-bold my-4">School Dashboard</h1>
 
         <div className="border p-4 my-4">

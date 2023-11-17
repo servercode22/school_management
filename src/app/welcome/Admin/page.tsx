@@ -10,37 +10,22 @@ import React from 'react';
 // import axios from 'axios';
 
 const  Admin: React.FC = () => {
-  // const router = useRouter();
-
-//   // Example: Fetching school information
-//   const { data: schoolInfo, isLoading, isError } = useQuery('schoolInfo', async () => {
-//     const response = await axios.get('/api/school-info');
-//     return response.data;
-//   });
-
-//   if (isLoading) {
-//     return <div>Loading...</div>;
-//   }
-
-//   if (isError) {
-//     return <div>Error loading data</div>;
-//   }
+ 
 
   return (
-    <div>
+    <div className='mt-8'>
       <Head>
         <title>School Dashboard</title>
       </Head>
 
-      <div className="container mx-auto">
-        <h1 className="text-2xl font-bold my-4">School Dashboard</h1>
+      <div className="container mx-auto  mt-10 ">
+       
+        <h1 className="text-2xl font-bold my-4 ">School Dashboard</h1>
 
         {/* Display School Information */}
         <div className="border p-4 my-4">
           <h2 className="text-xl font-bold mb-2">School Information</h2>
-          {/* <p>School Name: {schoolInfo.name}</p>
-          <p>Location: {schoolInfo.location}</p> */}
-          {/* Add more school information as needed */}
+        
         </div>
 
         {/* Navigation to different sections */}

@@ -67,11 +67,11 @@ const CreateBusiness = () => {
   return (
     <div className="min-h-screen flex items-center justify-center mt-5">
       {/* <form className="w-full max-w-md" onSubmit={handleSubmit}> */}
-      <form className="w-full max-w-md" >
+      <form className="w-full max-w-md mt-5" >
         {/* Your form fields go here */}
         {/* Example: */}
         <div className="mb-4">
-          <label htmlFor="name" className="block text-gray-700 text-sm font-bold mb-2">
+          <label htmlFor="name" className="block text-gray-700 text-sm font-bold mb-2 mt-8">
             Business Name
           </label>
           <input
