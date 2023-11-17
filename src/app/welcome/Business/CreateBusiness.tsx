@@ -65,7 +65,7 @@ const CreateBusiness = () => {
 //   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center">
+    <div className="min-h-screen flex items-center justify-center mt-5">
       {/* <form className="w-full max-w-md" onSubmit={handleSubmit}> */}
       <form className="w-full max-w-md" >
         {/* Your form fields go here */}
